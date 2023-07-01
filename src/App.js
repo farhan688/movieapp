@@ -17,7 +17,7 @@ const [popularMovies, setPopularMovies] = useState([]);
           <div className="movie-wrapper" key={i}>
             <div className="movie-title">{movie.title}</div>
             <img className="movie-image" src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`} alt="Movie" />
-            <div className="movie-date">{movie.release_date}</div>
+            <div className="movie-date">Release Date : {movie.release_date}</div>
             <div className="movie-rate">{movie.vote_average}</div>
           </div>
       )
