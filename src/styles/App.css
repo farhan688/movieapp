@@ -1,0 +1,272 @@
+.App {
+  text-align: center;
+  background-color: #303133;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App-header {
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-shadow: 3px 3px #8b874d;
+}
+
+.movie-input {
+  height: 40px;
+  width: 370px;
+  border-radius: 7px;
+  font-size: 17px;
+  margin-bottom: 20px;
+  padding: 4px;
+  border: 2px solid black;
+}
+
+.movie-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pagination {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.button {
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 3px;
+  transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: rgb(81, 81, 81);
+}
+
+.movie-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(24, 24, 24);
+  color: black;
+  margin: 15px;
+  padding: 10px;
+  padding-top: 2px;
+  border-radius: 15px;
+  width: 180px;
+  min-height: 350px;
+  transition: 0.5s ease-in-out;
+}
+
+.movie-wrapper:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
+}
+
+.movie-konten {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+}
+
+.movie-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.2em;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.movie-image {
+  width: 10em;
+  border-radius: 15px;
+}
+
+.movie-date {
+  color: #c0c1c4;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.movie-rate {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  margin-top: 5px;
+  gap: 0.1em;
+}
+
+.movie-rate > .star {
+  color: rgb(223, 223, 68);
+}
+
+.movie-overview {
+  position: absolute;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  color: white;
+  font-size: 13px;
+  padding: 10px;
+}
+
+.overview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-wrapper:hover .movie-overview {
+  opacity: 1;
+  visibility: visible;
+}
+
+.movie-wrapper:hover .movie-konten {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  .movie-input {
+    height: 1.8em;
+    width: 20em;
+    font-size: 17px;
+    padding-left: 8px;
+  }
+
+  .movie-wrapper {
+    margin: 10px;
+    padding: 10px;
+    padding-top: 2px;
+    width: 140px;
+    min-height: 250px;
+  }
+
+  .movie-title {
+    height: 4.2em;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .movie-image {
+    width: 8em;
+  }
+
+  .movie-date {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  .movie-rate {
+    font-size: 12px;
+    margin-top: 1px;
+    gap: 1.5px;
+  }
+
+  .movie-overview {
+    font-size: 11px;
+    padding: 7px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .movie-input {
+    height: 1.6em;
+    width: 20em;
+    font-size: 15px;
+    padding-left: 8px;
+  }
+
+  .movie-wrapper {
+    margin: 8px;
+    padding: 6px;
+    padding-top: 1px;
+    width: 115px;
+    min-height: 240px;
+  }
+
+  .movie-title {
+    height: 4.2em;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .movie-image {
+    width: 7em;
+  }
+
+  .movie-date {
+    font-size: 10px;
+    margin-top: 6px;
+  }
+
+  .movie-rate {
+    font-size: 10px;
+    margin-top: 1px;
+    gap: 1.5px;
+  }
+
+  .movie-overview {
+    font-size: 9.5px;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .movie-input {
+    height: 1.4em;
+    width: 20em;
+    font-size: 13px;
+    padding-left: 8px;
+  }
+
+  .movie-wrapper {
+    margin: 5px;
+    padding: 4px;
+    padding-top: 1px;
+    width: 100px;
+    min-height: 190px;
+  }
+
+  .movie-title {
+    height: 4.2em;
+    font-size: 9.5px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .movie-image {
+    width: 5.8em;
+  }
+
+  .movie-date {
+    font-size: 8.5px;
+    margin-top: 6px;
+  }
+
+  .movie-rate {
+    font-size: 8.5px;
+    margin-top: 1px;
+    gap: 1px;
+  }
+
+  .movie-overview {
+    font-size: 9px;
+    padding: 5px;
+  }
+}
